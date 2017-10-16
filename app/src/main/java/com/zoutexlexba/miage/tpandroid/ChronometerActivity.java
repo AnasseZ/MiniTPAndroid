@@ -1,5 +1,6 @@
 package com.zoutexlexba.miage.tpandroid;
 
+import android.content.Intent;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,5 +32,10 @@ public class ChronometerActivity extends AppCompatActivity {
     public void resetChrono(View view) {
         chronometer.setBase(SystemClock.elapsedRealtime());
         timeWhenStopped = 0;
+    }
+
+    public void displayWebViewActivity(View view) {
+        Intent intent = new Intent(this,WebViewActivity.class);
+        startActivity(intent);
     }
 }
