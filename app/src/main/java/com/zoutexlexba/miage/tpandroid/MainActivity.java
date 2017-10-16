@@ -1,5 +1,6 @@
 package com.zoutexlexba.miage.tpandroid;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -57,5 +58,10 @@ public class MainActivity extends AppCompatActivity {
     public void replaceTextView(int id, String text) {
         TextView textView = (TextView) findViewById(id);
         textView.setText(text);
+    }
+
+    public void nextGame(View view) {
+        Intent intent = new Intent(this,ChronometerActivity.class);
+        startActivity(intent);
     }
 }
