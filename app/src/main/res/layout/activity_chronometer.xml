@@ -16,58 +16,86 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textStyle="bold"
         android:textSize="50dp"
-        android:layout_marginBottom="300dp" />
+        android:layout_marginBottom="300dp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1" />
 
-    <Button
-        android:id="@+id/playChrono"
-        android:onClick="playChrono"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Lancer" />
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="210dp"
+        app:layout_constraintLeft_toLeftOf="parent">
 
-    <Button
-        android:id="@+id/stopChrono"
-        android:onClick="stopChrono"
+        <Button
+            android:id="@+id/stopChrono"
+            android:onClick="stopChrono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Pause"
+            app:layout_constraintHorizontal_bias="0.131"
+            app:layout_constraintVertical_bias="0.498" />
+
+        <Button
+            android:id="@+id/playChrono"
+            android:onClick="playChrono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Lancer" />
+
+
+        <Button
+            android:id="@+id/resetChrono"
+            android:onClick="resetChrono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Reset"
+            app:layout_constraintHorizontal_bias="0.881"
+            app:layout_constraintVertical_bias="0.498" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Pause"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintVertical_bias="0.498" />
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="51dp"
+        app:layout_constraintLeft_toLeftOf="parent">
 
-    <Button
-        android:id="@+id/resetChrono"
-        android:onClick="resetChrono"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Reset"
-        app:layout_constraintHorizontal_bias="0.881"
-        app:layout_constraintVertical_bias="0.498" />
+        <Button
+            android:id="@+id/nextGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Page Suivante"
+            android:onClick="displayWebViewActivity"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintVertical_bias="0.892" />
 
-    <Button
-        android:id="@+id/nextGame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Page Suivante"
-        android:onClick="displayWebViewActivity"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintVertical_bias="0.892" />
-
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
