@@ -7,13 +7,53 @@
     tools:context="com.zoutexlexba.miage.tpandroid.ChronometerActivity">
 
     <Chronometer
-        android:id="@+id/chronometer2"
+        android:id="@+id/chronometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        android:textSize="50dp"
         android:layout_marginBottom="300dp" />
+
+    <Button
+        android:id="@+id/playChrono"
+        android:onClick="playChrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Lancer" />
+
+    <Button
+        android:id="@+id/stopChrono"
+        android:onClick="stopChrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Pause"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <Button
+        android:id="@+id/resetChrono"
+        android:onClick="resetChrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Reset"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintVertical_bias="0.498" />
 
 
 </android.support.constraint.ConstraintLayout>
