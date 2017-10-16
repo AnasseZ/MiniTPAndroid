@@ -1,5 +1,6 @@
-# MiniTPAndroid
-Quelques exercices sous Android dont un jeu Plus ou Moins pour le moment
+# Mini TP Android
+Quelques exercices sous Android
 
-
-Jeu Plus ou Moins : Fonctionnel.
+- Jeu du plus ou moins
+- Chronomètre
+- Webview du site https://developer.android.com/
