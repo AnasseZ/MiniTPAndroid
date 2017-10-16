@@ -63,7 +63,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="Jeu Suivant"
+        android:text="Page Suivante"
         android:onClick="displayWebViewActivity"
         android:textColor="@color/colorPrimary"
         app:layout_constraintHorizontal_bias="0.501"
