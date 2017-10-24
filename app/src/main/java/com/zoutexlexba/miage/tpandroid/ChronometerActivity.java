@@ -20,7 +20,7 @@ public class ChronometerActivity extends AppCompatActivity {
     }
     //Start the chrono at timeWhenStopped
     public void playChrono(View view) {
-        //Creation
+        //Retrieve the chronometer by his ID.
         chronometer = (Chronometer) findViewById(R.id.chronometer);
         //Setting the time base
         chronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
