@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         this.replaceTextView(R.id.resultat, "");
         this.replaceTextView(R.id.nbCoups, Integer.toString(this.nbCoups));
 
-        //Create and display playButton
+        //Find the right playButton and enable it so players can replay
         Button playButton = (Button) findViewById(R.id.playGame);
         playButton.setEnabled(true);
     }
