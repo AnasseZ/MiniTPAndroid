@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int resultat;
     public  Random randomGenerator = new Random();
+    // This is to count the number of time the player tries a number
     public int nbCoups = 0;
 
     @Override
@@ -22,15 +23,18 @@ public class MainActivity extends AppCompatActivity {
         this.resultat = randomGenerator.nextInt(100);
         setContentView(R.layout.activity_main);
     }
-
+    
+    //Listener function --> When player clicks on the screen and enters his result
     public void onClick(View view) {
         this.nbCoups++;
+        // Update nbCoups and display it 
         this.replaceTextView(R.id.nbCoups,Integer.toString(this.nbCoups));
-
+    
         EditText userInput =  (EditText) findViewById(R.id.response);
         int userValue = Integer.parseInt(userInput.getText().toString());
         TextView resultatView = (TextView)findViewById(R.id.resultat);
-
+        
+        // Victory condition
         if (userValue == resultat ) {
             resultatView.setText("Bravo vous avez gagné !\n"
             + "Le résultat était : " + resultat);
@@ -45,17 +49,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void replayGame(View view) {
+        //Reset all used variables
         this.resultat = randomGenerator.nextInt(100);
         this.nbCoups = 0;
 
+        //Reset text fields
         this.replaceTextView(R.id.resultat, "");
         this.replaceTextView(R.id.nbCoups, Integer.toString(this.nbCoups));
 
+        //Find the right playButton and enable it so players can replay
         Button playButton = (Button) findViewById(R.id.playGame);
         playButton.setEnabled(true);
     }
 
     public void replaceTextView(int id, String text) {
+        //Update textView with text
         TextView textView = (TextView) findViewById(id);
         textView.setText(text);
     }
